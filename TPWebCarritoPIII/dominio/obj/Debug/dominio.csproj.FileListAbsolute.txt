@@ -1,0 +1,6 @@
+C:\Users\brigi\OneDrive\Documentos\Darío\TUP 2023\2do Cuatrimestre\Programacion III\Repo GItHub\ABM-Productos-UTN\dominio\bin\Debug\dominio.dll
+C:\Users\brigi\OneDrive\Documentos\Darío\TUP 2023\2do Cuatrimestre\Programacion III\Repo GItHub\ABM-Productos-UTN\dominio\bin\Debug\dominio.pdb
+C:\Users\brigi\OneDrive\Documentos\Darío\TUP 2023\2do Cuatrimestre\Programacion III\Repo GItHub\ABM-Productos-UTN\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\brigi\OneDrive\Documentos\Darío\TUP 2023\2do Cuatrimestre\Programacion III\Repo GItHub\ABM-Productos-UTN\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\brigi\OneDrive\Documentos\Darío\TUP 2023\2do Cuatrimestre\Programacion III\Repo GItHub\ABM-Productos-UTN\dominio\obj\Debug\dominio.dll
+C:\Users\brigi\OneDrive\Documentos\Darío\TUP 2023\2do Cuatrimestre\Programacion III\Repo GItHub\ABM-Productos-UTN\dominio\obj\Debug\dominio.pdb

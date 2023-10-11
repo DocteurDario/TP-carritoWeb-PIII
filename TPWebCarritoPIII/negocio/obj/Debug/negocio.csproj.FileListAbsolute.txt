@@ -1,0 +1,9 @@
+C:\Users\brigi\OneDrive\Documentos\Darío\TUP 2023\2do Cuatrimestre\Programacion III\Repo GItHub\ABM-Productos-UTN\negocio\bin\Debug\negocio.dll
+C:\Users\brigi\OneDrive\Documentos\Darío\TUP 2023\2do Cuatrimestre\Programacion III\Repo GItHub\ABM-Productos-UTN\negocio\bin\Debug\negocio.pdb
+C:\Users\brigi\OneDrive\Documentos\Darío\TUP 2023\2do Cuatrimestre\Programacion III\Repo GItHub\ABM-Productos-UTN\negocio\bin\Debug\dominio.dll
+C:\Users\brigi\OneDrive\Documentos\Darío\TUP 2023\2do Cuatrimestre\Programacion III\Repo GItHub\ABM-Productos-UTN\negocio\bin\Debug\dominio.pdb
+C:\Users\brigi\OneDrive\Documentos\Darío\TUP 2023\2do Cuatrimestre\Programacion III\Repo GItHub\ABM-Productos-UTN\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+C:\Users\brigi\OneDrive\Documentos\Darío\TUP 2023\2do Cuatrimestre\Programacion III\Repo GItHub\ABM-Productos-UTN\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\brigi\OneDrive\Documentos\Darío\TUP 2023\2do Cuatrimestre\Programacion III\Repo GItHub\ABM-Productos-UTN\negocio\obj\Debug\negocio.csproj.CopyComplete
+C:\Users\brigi\OneDrive\Documentos\Darío\TUP 2023\2do Cuatrimestre\Programacion III\Repo GItHub\ABM-Productos-UTN\negocio\obj\Debug\negocio.dll
+C:\Users\brigi\OneDrive\Documentos\Darío\TUP 2023\2do Cuatrimestre\Programacion III\Repo GItHub\ABM-Productos-UTN\negocio\obj\Debug\negocio.pdb
