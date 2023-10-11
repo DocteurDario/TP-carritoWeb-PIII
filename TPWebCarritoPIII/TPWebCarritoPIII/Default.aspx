@@ -7,8 +7,7 @@
         <%
             foreach (dominio.Articulo item in listaArticulo)
             {
-        %>
-        
+        %>       
             <div class="col">
                 <div class="card">
                     <img src="<%:item.imagen.imagenUrl %>" class="card-img-top" alt="...">
@@ -23,7 +22,4 @@
             }
         %>
     </div>
-
-
-
 </asp:Content>
