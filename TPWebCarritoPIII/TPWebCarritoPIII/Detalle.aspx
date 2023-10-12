@@ -17,6 +17,7 @@
                 <asp:Label ID="lblMarca" runat="server" /></p>
             <p class="card-text">
                 <asp:Label ID="lblPrecio" runat="server" /></p>
+            <asp:Button ID="btnVolver" runat="server" Text="Volver" CssClass="btn btn-outline-success" OnClick="btnVolver_Click" />
         </div>
     </div>
 </asp:Content>
