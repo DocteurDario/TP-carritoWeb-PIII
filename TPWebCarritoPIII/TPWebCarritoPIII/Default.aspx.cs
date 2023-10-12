@@ -18,6 +18,8 @@ namespace TPWebCarritoPIII
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             listaArticulo = negocio.listar();
+            Repeater1.DataSource = listaArticulo;
+            Repeater1.DataBind();
         }
     }
 }
