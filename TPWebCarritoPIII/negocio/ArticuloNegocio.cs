@@ -268,5 +268,46 @@ namespace negocio
                 throw ex;
             }
         }
+        public Articulo obtenerPorId(int idarticulo)
+        {
+            AccesoADatos datos = new AccesoADatos();
+
+            try
+            {
+                datos.setearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion,I.Id as ImagenId, I.ImagenUrl, M.Descripcion as Marca, C.Descripcion as Categoria, A.Precio, A.IdMarca, A.IdCategoria FROM ARTICULOS A LEFT JOIN IMAGENES I ON A.Id = I.IdArticulo LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    if ((int)datos.Lector["Id"] == idarticulo)
+                    {
+                        Articulo articulo = new Articulo();
+                        articulo.id = idarticulo;
+                        articulo.codigo = (string)datos.Lector["Codigo"];
+                        articulo.nombre = (string)datos.Lector["Nombre"];
+                        articulo.descripcion = (string)datos.Lector["Descripcion"];
+                        articulo.imagen = new Imagen();
+                        articulo.imagen.id = (int)datos.Lector["ImagenId"];
+                        articulo.imagen.imagenUrl = (string)datos.Lector["ImagenUrl"];
+                        articulo.marca = new Marca();
+                        articulo.marca.descripcion = (string)datos.Lector["Marca"];
+                        articulo.categoria = new Categoria();
+                        articulo.categoria.descripcion = (string)datos.Lector["Categoria"];
+                        articulo.precio = (decimal)datos.Lector["Precio"];
+                        return articulo;
+                    }
+                }
+
+                return null; // Si no se encontró el artículo, devuelve null.
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

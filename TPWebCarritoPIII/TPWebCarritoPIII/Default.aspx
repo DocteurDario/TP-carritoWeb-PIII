@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TPWebCarritoPIII.Default" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -7,17 +8,21 @@
         <%
             foreach (dominio.Articulo item in listaArticulo)
             {
-        %>       
-            <div class="col">
-                <div class="card">
-                    <img src="<%:item.imagen.imagenUrl %>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title"><%: item.nombre%></h5>
-                        <p class="card-text"><%: item.descripcion %></p>
-                        <asp:Button ID="BtnComprar"  runat="server" Text="Comprar" CssClass="btn btn-outline-success" />
-                    </div>
+        %>
+        <div class="col">
+            <div class="card">
+                <img src="<%:item.imagen.imagenUrl %>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><%: item.nombre%></h5>
+                    <p class="card-text"><%: item.descripcion %></p>
+                    <p class="card-text"><%: item.categoria %></p>
+                    <p class="card-text"><%: item.marca %></p>
+                    <p class="card-text"><%: item.precio %></p>
+                    <asp:Button ID="BtnComprar" runat="server" Text="Comprar" CssClass="btn btn-outline-success" />
+                    <a href="Detalle.aspx?id=<%:item.id %>">Ver Detalle</a>
                 </div>
             </div>
+        </div>
         <% 
             }
         %>
