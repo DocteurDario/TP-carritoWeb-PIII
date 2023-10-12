@@ -16,7 +16,7 @@
                             <p class="card-text"><%#Eval("categoria")%></p>
                             <p class="card-text"><%#Eval("marca")%></p>
                             <p class="card-text"><%#Eval("precio")%></p>
-                            <asp:Button ID="BtnComprar" runat="server" Text="Comprar" CssClass="btn btn-outline-success" />
+                            <asp:Button ID="BtnComprar" runat="server" Text="Comprar" CssClass="btn btn-outline-success" CommandArgument='<%#Eval("id") %>' CommandName="ArticuloId" OnClick="BtnComprar_Click" />
                             <a href="Detalle.aspx?id=<%#Eval("id")%>">Ver Detalle</a>
                         </div>
                     </div>

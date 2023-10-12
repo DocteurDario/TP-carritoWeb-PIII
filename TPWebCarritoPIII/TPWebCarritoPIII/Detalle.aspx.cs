@@ -16,15 +16,17 @@ namespace TPWebCarritoPIII
             if (Request.QueryString["id"] != null)
             {
                 int userId = int.Parse(Request.QueryString["id"]);
-
                 ArticuloNegocio dato = new ArticuloNegocio();
                 Articulo articulo = new Articulo();
-
                 articulo = dato.obtenerPorId(userId);
 
-                txtNombre.Text = articulo.nombre;
-                txtDetalle.Text = articulo.descripcion;
-
+                imgArticulo.ImageUrl = articulo.imagen.imagenUrl;
+                lblNombre.Text = articulo.nombre;
+                lblDescripcion.Text = articulo.descripcion;
+                lblCategoria.Text = articulo.categoria.descripcion;
+                lblMarca.Text = articulo.marca.descripcion;
+                lblPrecio.Text = articulo.precio.ToString();
+               
             }
         }
     }

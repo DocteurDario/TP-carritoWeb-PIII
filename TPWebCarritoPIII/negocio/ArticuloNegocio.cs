@@ -268,7 +268,7 @@ namespace negocio
                 throw ex;
             }
         }
-        public Articulo obtenerPorId(int idarticulo)
+        public Articulo obtenerPorId(int idArticulo)
         {
             AccesoADatos datos = new AccesoADatos();
 
@@ -279,10 +279,10 @@ namespace negocio
 
                 while (datos.Lector.Read())
                 {
-                    if ((int)datos.Lector["Id"] == idarticulo)
+                    if ((int)datos.Lector["Id"] == idArticulo)
                     {
                         Articulo articulo = new Articulo();
-                        articulo.id = idarticulo;
+                        articulo.id = idArticulo;
                         articulo.codigo = (string)datos.Lector["Codigo"];
                         articulo.nombre = (string)datos.Lector["Nombre"];
                         articulo.descripcion = (string)datos.Lector["Descripcion"];
@@ -292,7 +292,14 @@ namespace negocio
                         articulo.marca = new Marca();
                         articulo.marca.descripcion = (string)datos.Lector["Marca"];
                         articulo.categoria = new Categoria();
-                        articulo.categoria.descripcion = (string)datos.Lector["Categoria"];
+                        if (!datos.Lector.IsDBNull(datos.Lector.GetOrdinal("Categoria")))
+                        {
+                            articulo.categoria.descripcion = (string)datos.Lector["Categoria"];
+                        }
+                        else
+                        {
+                            articulo.categoria.descripcion = "";
+                        }
                         articulo.precio = (decimal)datos.Lector["Precio"];
                         return articulo;
                     }
