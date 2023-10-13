@@ -11,6 +11,7 @@
 
     </style>
 
+    <asp:GridView runat="server" ID="dgvCarrito" CssClass="table table-active table-primary text-center" AutoGenerateColumns="true"></asp:GridView>
 
     <section class="h-100" style="background-color: #eee;">
         <div class="container h-100 py-5">

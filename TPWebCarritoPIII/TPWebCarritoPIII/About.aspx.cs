@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dominio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,9 @@ namespace TPWebCarritoPIII
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            List<Articulo> temporal = (List<Articulo>)Session["listaSesionCarrito"];
+            dgvCarrito.DataSource = temporal;
+            dgvCarrito.DataBind();
 
         }
     }

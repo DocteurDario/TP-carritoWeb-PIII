@@ -27,6 +27,24 @@ namespace TPWebCarritoPIII
         protected void BtnComprar_Click(object sender, EventArgs e)
         {
             int valor = int.Parse(((Button)sender).CommandArgument);
+
+            ArticuloNegocio dato = new ArticuloNegocio();
+            Articulo articulo = new Articulo();
+            List<Articulo> temporal = new List<Articulo>();
+
+            if (Session["listaSesionCarrito"] == null)
+            {
+                temporal.Add(dato.obtenerPorId(valor));
+                Session.Add("listaSesionCarrito", temporal);
+            }
+            else
+            {
+                ((List<Articulo>)Session["listaSesionCarrito"]).Add(dato.obtenerPorId(valor)); //forma corta
+
+                //temporal = (List<Articulo>)Session["listaSesionCarrito"];
+                //temporal.Add(articulo);
+
+            }
         }
     }
 }
