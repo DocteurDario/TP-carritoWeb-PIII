@@ -26,7 +26,7 @@ namespace TPWebCarritoPIII
         }
         protected void BtnComprar_Click(object sender, EventArgs e)
         {
-            string valor = ((Button)sender).CommandArgument;
+            int valor = int.Parse(((Button)sender).CommandArgument);
         }
     }
 }
