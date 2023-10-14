@@ -22,7 +22,9 @@
                                 <a class="nav-link active" aria-current="page" href="Default.aspx">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="About.aspx">Carrito</a>
+                               <%-- <a class="nav-link" href="About.aspx">Carrito</a>--%>
+                                <a class="nav-link" href="About.aspx">Carrito (<asp:Label ID="lblCantidadArticulos" runat="server" Text="0" CssClass="badge badge-light"></asp:Label>)</a>
+                                <%--<asp:Label ID="lblCantidadArticulos" runat="server" CssClass="tu-clase-de-css">0</asp:Label>--%>
                             </li>                                                       
                         </ul>
                     </div>

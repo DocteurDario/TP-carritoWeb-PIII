@@ -4,7 +4,19 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Carrito</h1>
-    <asp:GridView runat="server" ID="dgvCarrito" CssClass="table table-active table-primary text-center" AutoGenerateColumns="true"></asp:GridView>
+    
+    <asp:GridView runat="server" ID="dgvCarrito" DataKeyNames="Id" OnSelectedIndexChanged="dgvCarrito_SelectedIndexChanged" CssClass="table table-active table-primary text-center" AutoGenerateColumns="false">
+    <Columns>
+        <asp:BoundField Headertext="Id" DataField="Id" HeaderStyle-CssClass="oculto" ItemStyle-CssClass="oculto"/>
+        <asp:BoundField HeaderText="Codigo" DataField="Codigo"/>
+        <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
+        <asp:BoundField HeaderText="Marca" DataField="Marca" />
+        <asp:BoundField HeaderText="Categoria" DataField="Categoria" />
+        <asp:BoundField HeaderText="Precio" DataField="Precio" />
+        <asp:CommandField ShowSelectButton="true" SelectText="Eliminar" HeaderText="Acción" ItemStyle-CssClass="btn btn-outline-secondary" />
+    </Columns>
+    </asp:GridView>
+    
     <section class="h-100" style="background-color: #eee;">
         <div class="container h-100 py-5">
             <div class="row d-flex justify-content-center align-items-center h-100">
