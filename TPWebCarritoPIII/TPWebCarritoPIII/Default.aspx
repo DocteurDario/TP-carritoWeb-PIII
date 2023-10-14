@@ -9,7 +9,9 @@
             <ItemTemplate>
                 <div class="col">
                     <div class="card">
-                        <img src="<%#Eval("imagen.imagenUrl")%>" class="card-img-top" alt="...">
+                        <img src="<%#Eval("imagen.imagenUrl")%>" class="card-img-top"
+                            alt="Imagen del producto <%#Eval("nombre") %>"
+                            onerror="this.src='https://static.wikia.nocookie.net/videojuego/images/9/9c/Imagen_no_disponible-0.png/revision/latest/thumbnail/width/360/height/360?cb=20170910134200'" />
                         <div class="card-body">
                             <h5 class="card-title"><%#Eval("nombre")%></h5>
                             <p class="card-text"><%#Eval("descripcion")%></p>
