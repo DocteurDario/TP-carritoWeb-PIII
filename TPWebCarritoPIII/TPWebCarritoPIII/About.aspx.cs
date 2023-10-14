@@ -12,10 +12,23 @@ namespace TPWebCarritoPIII
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<Articulo> temporal = (List<Articulo>)Session["listaSesionCarrito"];
-            dgvCarrito.DataSource = temporal;
-            dgvCarrito.DataBind();
+            if (!IsPostBack)
+            {
+                List<Articulo> temporal = (List<Articulo>)Session["listaSesionCarrito"];
+                dgvCarrito.DataSource = temporal;
+                dgvCarrito.DataBind();
 
+                decimal totalPrecio = 0;
+
+                if (temporal != null)
+                {
+                    foreach (Articulo articulo in temporal)
+                    {
+                        totalPrecio += articulo.precio;
+                    }
+                }
+                lblTotal.Text = "Total a pagar: " + totalPrecio.ToString("C");
+            }
         }
     }
 }

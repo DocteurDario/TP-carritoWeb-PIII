@@ -16,3 +16,9 @@ C:\Users\Nahuel\OneDrive\Escritorio\TP-4-CARRITOWEB\TP-carritoWeb-PIII\TPWebCarr
 C:\Users\Nahuel\OneDrive\Escritorio\TP-4-CARRITOWEB\TP-carritoWeb-PIII\TPWebCarritoPIII\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
 C:\Users\Nahuel\OneDrive\Escritorio\TP-4-CARRITOWEB\TP-carritoWeb-PIII\TPWebCarritoPIII\dominio\obj\Debug\dominio.dll
 C:\Users\Nahuel\OneDrive\Escritorio\TP-4-CARRITOWEB\TP-carritoWeb-PIII\TPWebCarritoPIII\dominio\obj\Debug\dominio.pdb
+D:\Users\Gonzalo\Desktop\TP4\TP-carritoWeb-PIII\TPWebCarritoPIII\dominio\bin\Debug\dominio.dll
+D:\Users\Gonzalo\Desktop\TP4\TP-carritoWeb-PIII\TPWebCarritoPIII\dominio\bin\Debug\dominio.pdb
+D:\Users\Gonzalo\Desktop\TP4\TP-carritoWeb-PIII\TPWebCarritoPIII\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+D:\Users\Gonzalo\Desktop\TP4\TP-carritoWeb-PIII\TPWebCarritoPIII\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+D:\Users\Gonzalo\Desktop\TP4\TP-carritoWeb-PIII\TPWebCarritoPIII\dominio\obj\Debug\dominio.dll
+D:\Users\Gonzalo\Desktop\TP4\TP-carritoWeb-PIII\TPWebCarritoPIII\dominio\obj\Debug\dominio.pdb

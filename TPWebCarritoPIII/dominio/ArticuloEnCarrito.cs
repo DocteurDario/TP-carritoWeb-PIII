@@ -13,7 +13,6 @@ namespace dominio
             idArt = IdArt;
             Cantidad = 1;
         }
-
         public int idArt { get; set; }
         public int Cantidad { get; set; }
     }
