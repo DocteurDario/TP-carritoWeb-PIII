@@ -15,6 +15,7 @@
                         onerror="this.src='https://static.wikia.nocookie.net/videojuego/images/9/9c/Imagen_no_disponible-0.png/revision/latest/thumbnail/width/360/height/360?cb=20170910134200'" />
 
                     <div class="product-details">
+                        <p class="product-brand"><%#Eval("marca")%></p>
                         <p class="product-name"><%# Eval("nombre") %></p>
                         <p class="product-description"><%# Eval("descripcion") %></p>
                         <p class="product-price"><%# Eval("precio") %></p>

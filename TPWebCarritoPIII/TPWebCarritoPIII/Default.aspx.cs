@@ -14,6 +14,7 @@ namespace TPWebCarritoPIII
     public partial class Default : System.Web.UI.Page
     {
         public List<Articulo> listaArticulo { get; set; }
+        public List<Articulo> listaFiltro = new List<Articulo>();
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
@@ -47,6 +48,27 @@ namespace TPWebCarritoPIII
             }
 
             
+        }
+
+        protected void BtnFilter_Click(object sender, EventArgs e)
+        {
+            string filter = TxtFilter.Text;
+
+            List<Articulo> listaFiltrada;
+            if (filter.Length >= 3)
+            {
+                listaFiltrada = listaArticulo.FindAll(x => x.nombre.ToUpper().Contains(filter.ToUpper())
+                || x.descripcion.ToUpper().Contains(filter.ToUpper())
+                || x.codigo.ToUpper().Contains(filter.ToUpper()));
+
+            }
+            else
+            {
+                listaFiltrada = listaArticulo;
+            }
+
+            Repeater1.DataSource = listaFiltrada;
+            Repeater1.DataBind();
         }
     }
 }
