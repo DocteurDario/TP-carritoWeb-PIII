@@ -26,12 +26,31 @@ namespace TPWebCarritoPIII
                 lblCategoria.Text = articulo.categoria.descripcion;
                 lblMarca.Text = articulo.marca.descripcion;
                 lblPrecio.Text = articulo.precio.ToString();
-               
+
+                ActualizarCantidadEnMaster(ObtenerCantidadArticulos().ToString());
+
             }
+            ActualizarCantidadEnMaster(ObtenerCantidadArticulos().ToString());
         }
         protected void btnVolver_Click(object sender, EventArgs e)
         {
             Response.Redirect("Default.aspx");
+        }
+
+        private int ObtenerCantidadArticulos()
+        {
+            if (Session["listaSesionCarrito"] != null)
+            {
+                List<Articulo> temporal = (List<Articulo>)Session["listaSesionCarrito"];
+                return temporal.Count;
+            }
+            return 0; // Devuelve 0 si la lista está vacía
+        }
+
+        protected void ActualizarCantidadEnMaster(string cantidad)
+        {
+            var masterPage = (MasterPage)Master;
+            masterPage.ActualizarCantidadArticulos(cantidad.ToString());
         }
 
 

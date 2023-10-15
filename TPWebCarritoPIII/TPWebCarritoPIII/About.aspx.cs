@@ -29,6 +29,7 @@ namespace TPWebCarritoPIII
                 }
                 lblTotal.Text = "Total a pagar: " + totalPrecio.ToString("C");
             }
+            ActualizarCantidadEnMaster(ObtenerCantidadArticulos().ToString());
         }
 
         protected void dgvCarrito_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,6 +56,8 @@ namespace TPWebCarritoPIII
             dgvCarrito.DataBind();
             decimal totalPrecio = 0;
 
+            ActualizarCantidadEnMaster(ObtenerCantidadArticulos().ToString());
+
             if (temporal != null)
             {
                 foreach (Articulo articulo in temporal)
@@ -64,6 +67,21 @@ namespace TPWebCarritoPIII
             }
             lblTotal.Text = "Total a pagar: " + totalPrecio.ToString("C");
 
+        }
+        private int ObtenerCantidadArticulos()
+        {
+            if (Session["listaSesionCarrito"] != null)
+            {
+                List<Articulo> temporal = (List<Articulo>)Session["listaSesionCarrito"];
+                return temporal.Count;
+            }
+            return 0; // Devuelve 0 si la lista está vacía
+        }
+
+        protected void ActualizarCantidadEnMaster(string cantidad)
+        {
+            var masterPage = (MasterPage)Master;
+            masterPage.ActualizarCantidadArticulos(cantidad.ToString());
         }
     }
 }

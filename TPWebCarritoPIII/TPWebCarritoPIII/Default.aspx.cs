@@ -6,8 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using negocio;
-using dominio;
+
 
 namespace TPWebCarritoPIII
 {
@@ -15,6 +14,7 @@ namespace TPWebCarritoPIII
     {
         public List<Articulo> listaArticulo { get; set; }
         public List<Articulo> listaFiltro = new List<Articulo>();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
@@ -24,6 +24,7 @@ namespace TPWebCarritoPIII
                 Repeater1.DataSource = listaArticulo;
                 Repeater1.DataBind();
             }
+            ActualizarCantidadEnMaster(ObtenerCantidadArticulos().ToString());
         }
         protected void BtnComprar_Click(object sender, EventArgs e)
         {
@@ -46,8 +47,8 @@ namespace TPWebCarritoPIII
                 //temporal.Add(articulo);
 
             }
+            ActualizarCantidadEnMaster(ObtenerCantidadArticulos().ToString());
 
-            
         }
 
         protected void BtnFilter_Click(object sender, EventArgs e)
@@ -69,6 +70,21 @@ namespace TPWebCarritoPIII
 
             Repeater1.DataSource = listaFiltrada;
             Repeater1.DataBind();
+        }
+        private int ObtenerCantidadArticulos()
+        {
+            if (Session["listaSesionCarrito"] != null)
+            {
+                List<Articulo> temporal = (List<Articulo>)Session["listaSesionCarrito"];
+                return temporal.Count;
+            }
+            return 0; // Devuelve 0 si la lista está vacía
+        }
+
+        protected void ActualizarCantidadEnMaster(string cantidad)
+        {
+            var masterPage = (MasterPage)Master;
+            masterPage.ActualizarCantidadArticulos(cantidad.ToString());
         }
     }
 }
