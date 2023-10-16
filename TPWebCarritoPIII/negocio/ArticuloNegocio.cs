@@ -75,20 +75,25 @@ namespace negocio
                 {
                     Articulo aux = new Articulo();
                     aux.id = (int)datos.Lector["Id"];
-                    aux.codigo = (string)datos.Lector["Codigo"];
-                    aux.nombre = (string)datos.Lector["Nombre"];
-                    aux.descripcion = (string)datos.Lector["Descripcion"];
+                    aux.codigo = datos.Lector["Codigo"] is DBNull ? null : (string)datos.Lector["Codigo"];
+                    aux.nombre = datos.Lector["Nombre"] is DBNull ? null : (string)datos.Lector["Nombre"];
+                    aux.descripcion = datos.Lector["Descripcion"] is DBNull ? null : (string)datos.Lector["Descripcion"];
+
                     aux.imagen = new Imagen();
                     aux.imagen.id = (int)datos.Lector["ImagenId"];
-                    aux.imagen.imagenUrl = (string)datos.Lector["ImagenUrl"];
+                    aux.imagen.imagenUrl = datos.Lector["ImagenUrl"] is DBNull ? null : (string)datos.Lector["ImagenUrl"];
+
                     aux.marca = new Marca();
-                    aux.marca.descripcion = (string)datos.Lector["Marca"];
+                    aux.marca.descripcion = datos.Lector["Marca"] is DBNull ? null : (string)datos.Lector["Marca"];
+
                     aux.categoria = new Categoria();
-                    aux.categoria.descripcion = (string)datos.Lector["Categoria"];
-                    aux.precio = (decimal)datos.Lector["Precio"];
+                    aux.categoria.descripcion = datos.Lector["Categoria"] is DBNull ? null : (string)datos.Lector["Categoria"];
+
+                    aux.precio = datos.Lector["Precio"] is DBNull ? 0.0m : (decimal)datos.Lector["Precio"];
 
                     lista.Add(aux);
                 }
+
                 return lista;
             }
             catch (Exception ex)

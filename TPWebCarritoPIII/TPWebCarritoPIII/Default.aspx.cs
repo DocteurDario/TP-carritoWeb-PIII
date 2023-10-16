@@ -18,7 +18,7 @@ namespace TPWebCarritoPIII
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
-            listaArticulo = negocio.listar();
+            listaArticulo = negocio.listarArticuloUnico();
             if(! IsPostBack )
             {
                 Repeater1.DataSource = listaArticulo;
