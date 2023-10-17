@@ -20,6 +20,9 @@ namespace TPWebCarritoPIII
                 Articulo articulo = new Articulo();
                 articulo = dato.obtenerPorId(userId);
 
+                ImagenNegocio imgDato = new ImagenNegocio();
+                List<Imagen> imagen = imgDato.listarImagenes(userId);
+
                 imgArticulo.ImageUrl = articulo.imagen.imagenUrl;
                 lblNombre.Text = articulo.nombre;
                 lblDescripcion.Text = articulo.descripcion;
@@ -27,7 +30,8 @@ namespace TPWebCarritoPIII
                 lblMarca.Text = articulo.marca.descripcion;
                 lblPrecio.Text = articulo.precio.ToString();
 
-                ActualizarCantidadEnMaster(ObtenerCantidadArticulos().ToString());
+                dgvImagen.DataSource = imagen;
+                dgvImagen.DataBind();
 
             }
             ActualizarCantidadEnMaster(ObtenerCantidadArticulos().ToString());

@@ -10,7 +10,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Tienda Verde</h1>
+    <h1 class="text-center">Tienda Verde</h1>
     <div class="input-group input-group-lg mb-3">
         <asp:TextBox ID="TxtFilter" runat="server" CssClass="form-control input-lg"></asp:TextBox>
         <div class="input-group-append">

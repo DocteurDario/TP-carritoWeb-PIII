@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Carrito</h1>
+    <h1 class="text-center">Tus Compras</h1>
 
     <asp:GridView runat="server" ID="dgvCarrito" DataKeyNames="Id" OnSelectedIndexChanged="dgvCarrito_SelectedIndexChanged" CssClass="table table-active table-primary text-center" AutoGenerateColumns="false">
         <Columns>
